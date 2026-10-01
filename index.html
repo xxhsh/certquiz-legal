@@ -74,9 +74,32 @@
     color: var(--muted);
     font-size: 0.85rem;
   }
+  nav.site {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+  nav.site a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 999px;
+  }
+  nav.site a.active {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+  }
 </style>
 </head>
 <body>
+<nav class="site">
+  <a href="index.html" class="active">Privacy Policy</a>
+  <a href="guide.html">Usage Guide</a>
+</nav>
 <main>
   <h1>Privacy Policy</h1>
   <p class="effective-date">Effective date: July 1, 2025</p>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CertQuiz Usage Guide</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1f26;
+    --muted: #5b6672;
+    --accent: #1565c0;
+    --rule: #e3e7ec;
+    --card: #f5f7fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12161c;
+      --fg: #e8ecf1;
+      --muted: #9aa5b1;
+      --accent: #6ab0ff;
+      --rule: #273039;
+      --card: #191f27;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  nav.site {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+  nav.site a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 999px;
+  }
+  nav.site a.active {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+  }
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header.hero {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  header.hero h1 {
+    font-size: 1.9rem;
+    margin: 0 0 12px;
+  }
+  header.hero p {
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  section.step {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 64px;
+  }
+  section.step:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  section.step img {
+    width: 220px;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+    flex-shrink: 0;
+  }
+  section.step .text {
+    flex: 1;
+  }
+  section.step .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+  section.step h2 {
+    font-size: 1.25rem;
+    margin: 0 0 10px;
+  }
+  section.step p {
+    color: var(--muted);
+    margin: 0;
+  }
+  @media (max-width: 680px) {
+    section.step, section.step:nth-child(even) {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+    section.step img { width: 200px; }
+  }
+  footer {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<nav class="site">
+  <a href="index.html">Privacy Policy</a>
+  <a href="guide.html" class="active">Usage Guide</a>
+</nav>
+<main>
+  <header class="hero">
+    <h1>Getting the Most Out of CertQuiz</h1>
+    <p>A quick visual walkthrough of every feature — from picking your first certification to tracking your progress toward exam day.</p>
+  </header>
+
+  <section class="step">
+    <img src="assets/01_pick_cert.png" alt="Home screen with certification tiles, Security+ highlighted">
+    <div class="text">
+      <span class="num">1</span>
+      <h2>Pick your certification</h2>
+      <p>Open CertQuiz and tap the exam you're studying for. You can switch between certifications anytime from this home screen — your progress on each is tracked separately.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <img src="assets/02_choose_mode.png" alt="Mode select screen with Study by Domain highlighted">
+    <div class="text">
+      <span class="num">2</span>
+      <h2>Choose how to study</h2>
+      <p><strong>Study by Domain</strong> lets you work through the exam chapter by chapter at your own pace. When you're ready, <strong>Exam Simulation</strong> gives you a full timed test that mirrors the real thing.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <img src="assets/03_pick_domain.png" alt="Category screen with a Practice button highlighted">
+    <div class="text">
+      <span class="num">3</span>
+      <h2>Pick a domain</h2>
+      <p>Inside Study by Domain, each exam objective gets its own card showing how many questions it has and how far you've gotten. Tap <strong>Practice</strong> to start.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <img src="assets/04_answer.png" alt="Quiz question screen with answer options highlighted">
+    <div class="text">
+      <span class="num">4</span>
+      <h2>Answer the question</h2>
+      <p>Read the scenario and tap the option you think is correct. Nothing is submitted until you confirm it — take your time.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <img src="assets/05_submit.png" alt="Submit Answer button highlighted">
+    <div class="text">
+      <span class="num">5</span>
+      <h2>Submit your answer</h2>
+      <p>Tap <strong>Submit Answer</strong> to lock it in and see immediately whether you got it right.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <img src="assets/06_explanation.png" alt="Explanation panel highlighted on a correctly answered question">
+    <div class="text">
+      <span class="num">6</span>
+      <h2>Read the explanation</h2>
+      <p>Every question comes with a full explanation — not just for the correct answer, but why the other options are wrong too. This is where the actual learning happens.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <img src="assets/07_bookmark.png" alt="Bookmark icon highlighted in the quiz screen's top bar">
+    <div class="text">
+      <span class="num">7</span>
+      <h2>Bookmark the tricky ones</h2>
+      <p>See a question you want to revisit? Tap the bookmark icon in the top-right corner, anytime — before or after answering.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <img src="assets/08_bookmarks_list.png" alt="Bookmarks screen with the Quiz from Bookmarks button highlighted">
+    <div class="text">
+      <span class="num">8</span>
+      <h2>Revisit your bookmarks</h2>
+      <p>Every bookmarked question lives in one place (<strong>Review &gt; Bookmarks</strong> on the mode select screen). Tap <strong>Quiz from Bookmarks</strong> to drill just those questions.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <img src="assets/09_progress.png" alt="My Progress screen with the domain breakdown highlighted">
+    <div class="text">
+      <span class="num">9</span>
+      <h2>Track your progress</h2>
+      <p><strong>My Progress</strong> breaks your accuracy down by domain, so you always know exactly which topics need more work before exam day.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <img src="assets/10_exam_sim.png" alt="Exam Simulation card highlighted on the mode select screen">
+    <div class="text">
+      <span class="num">10</span>
+      <h2>Simulate the real exam</h2>
+      <p>When you're ready, <strong>Exam Simulation</strong> pulls a full question set weighted exactly like the real exam blueprint, under a real countdown timer.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <img src="assets/11_settings.png" alt="Settings screen with Report a Bug and Request a Certification highlighted">
+    <div class="text">
+      <span class="num">11</span>
+      <h2>Need something else?</h2>
+      <p>From <strong>Settings</strong> you can schedule your exam date, set a daily question goal, turn on study reminders — and if something's broken or you want to see a new certification added, <strong>Report a Bug</strong> and <strong>Request a Certification</strong> send us an email directly.</p>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 CertQuiz. All rights reserved.</footer>
+</main>
+</body>
+</html>
